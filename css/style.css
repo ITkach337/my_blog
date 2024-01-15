@@ -5,7 +5,9 @@
   margin: 0px;
   border: 0px;
 }
-
+/*#11E3FC;
+background-color: #323234;
+*/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -34,6 +36,7 @@ html, body {
 }
 
 body {
+  background-color: #323234;
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
@@ -95,6 +98,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   min-height: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1 1 auto;
 }
 @media (max-width: 767.98px) {
   .wrapper {
@@ -124,7 +132,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 767.98px) {
   .container {
     max-width: none;
-    padding: 0 10px;
+    padding: 10px 30px;
   }
 }
 
@@ -216,7 +224,6 @@ h1, h2, h3, h4, h5, h6 {
 header {
   z-index: 50;
   position: relative;
-  background-color: #2a9ef1;
 }
 @media (max-width: 767.98px) {
   header {
@@ -224,6 +231,7 @@ header {
     left: 0;
     top: 0;
     width: 100%;
+    background-color: #696969;
   }
 }
 
@@ -260,11 +268,11 @@ header {
   }
 }
 .header__text {
-  display: none;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #fff;
+  font-weight: 600;
 }
 @media (max-width: 767.98px) {
   .header__text {
@@ -443,9 +451,11 @@ header {
 .mainblock {
   position: relative;
   height: 410px;
-  background-color: #f2f2f2;
+  order:2;
 }
 .mainblock__imageblock {
+  position: relative;
+  z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -464,7 +474,15 @@ header {
   height: 410px;
   width: 410px;
   border-radius: 50%;
-  border: 10px solid #fff;
+  border: 5px solid #11E3FC;
+  box-shadow: -1px -2px 87px 10px rgba(17,227,252,0.85);
+}
+@media (max-width: 1019.98px) {
+  .imageblock__avatar {
+    margin: 60px 10px 0 0;
+    height: 310px;
+    width: 310px;
+  }
 }
 @media (max-width: 767.98px) {
   .imageblock__avatar {
@@ -475,13 +493,94 @@ header {
 }
 
 .about-me {
-  margin: 170px 0 80px 0;
+  margin: 170px 130px 80px 0;
 }
-@media (max-width: 767.98px) {
-  .about-me {
-    margin: 80px 0 0 0;
+
+@media (max-width: 1019.98px) {
+  .about-me  {
+    margin: 60px 20px 0 10px;
   }
 }
+
+@media (max-width: 767.98px) {
+  .about-me {
+    margin: 130px 0 0 0;
+  }
+}
+
+.hello{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 24px;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.name{
+  font-size: 48px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 24px;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.work{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto;
+  line-height: 24px;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+.text{
+  position: relative;
+  color: #11E3FC;
+}
+.first-text{
+  color: #fff;
+}
+.sec-text:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 105%;
+  background-color: #323234;
+  border-left: 2px solid #11E3FC;
+  animation: animate 4s steps(12) infinite;
+}
+@keyframes animate{
+  40%, 60%{
+    left: calc(100% + 4px);
+  }
+  100%{
+    left: 0%;
+  }
+}
+.container_main{
+  display: flex;
+  flex: 1 1 auto;
+  margin: 0 0 200px 0;
+  justify-content: center;
+}
+
+@media (max-width: 1019.98px) {
+  .container_main{
+    margin: 0 0 85px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .container_main{
+    display: block;
+    margin: 0 0 70px 0;
+  }
+}
+
 .about-me__title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -509,9 +608,10 @@ header {
 .about-me__text {
   margin: 0 auto;
   line-height: 24px;
-  text-align: center;
-  max-width: 550px;
+  max-width: 400px;
   font-size: 16px;
+  color: #fff;
+  
 }
 .about-me__text span:first-child {
   font-weight: 700;
@@ -638,7 +738,7 @@ header {
           align-items: center;
 }
 .filter__item {
-  color: #3c3c3c;
+  color: #fff;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -661,6 +761,7 @@ header {
   text-transform: uppercase;
   letter-spacing: 5.43px;
   margin: 0px 0px 10px 0px;
+  color: #fff;
 }
 @media screen and (max-width: 767.98px), screen and (max-height: 600px) {
   .header-block__title {
@@ -1286,4 +1387,8 @@ ol.counter li:before {
 
 .baloon-close {
   top: 18px !important;
+}
+
+.blue{
+  color:#11E3FC;
 }
