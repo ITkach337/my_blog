@@ -45,6 +45,15 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+html.dark body{
+  background-color: #323234;
+}
+
+html.light body{
+  background-color: #ebf5f5;
+}
+
 body.lock {
   overflow: hidden;
 }
@@ -233,6 +242,9 @@ header {
     width: 100%;
     background-color: #696969;
   }
+
+  html.dark header{background-color:#696969 ;}
+  html.light header{background-color:#bfbfbf ;}
 }
 
 .header__body {
@@ -274,6 +286,15 @@ header {
   color: #fff;
   font-weight: 600;
 }
+
+html.dark .header__text{
+  color: #fff;
+}
+
+html.light .header__text{
+  color: #000;
+}
+
 @media (max-width: 767.98px) {
   .header__text {
     display: inline-block;
@@ -338,7 +359,7 @@ header {
     left: -110%;
     background-color: #fff;
     z-index: 2;
-    padding: 50px 10px 20px 10px;
+    padding: 50px 10px 20px 30px;
     overflow: auto;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -347,6 +368,7 @@ header {
   .menu-header__menu.active {
     left: 0;
   }
+  html.dark .menu-header__menu.active {background-color: #5f5f5f;}
 }
 .menu-header__list {
   display: -webkit-box;
@@ -389,6 +411,14 @@ header {
   display: block;
   position: relative;
 }
+
+html.dark .menu-header__link{
+  color: #fff;
+}
+html.light .menu-header__link{
+  color: #000;
+}
+
 .menu-header__link span {
   position: relative;
   display: block;
@@ -408,11 +438,15 @@ header {
 }
 
 .footer {
-  background-color: #f2f2f2;
+  background-color: #696969;
   padding: 15px 0;
   position: relative;
   z-index: 5;
 }
+
+html.dark .footer{background-color:#696969 ;}
+html.light .footer{background-color:#bfbfbf ;}
+
 .footer__body {
   text-align: center;
 }
@@ -440,7 +474,7 @@ header {
   margin: 0px 15px;
 }
 .footer__link {
-  color: #000;
+  color: #fff;
   font-size: 14px;
   font-weight: 400;
 }
@@ -517,6 +551,9 @@ header {
   max-width: 400px;
   margin-bottom: 30px;
 }
+
+html.dark .hello{ color: #fff;}
+html.light .hello{ color: #000;}
 .name{
   font-size: 48px;
   color: #fff;
@@ -526,6 +563,8 @@ header {
   max-width: 400px;
   margin-bottom: 30px;
 }
+html.dark .name{ color: #fff;}
+html.light .name{ color: #000;}
 .work{
   font-size: 20px;
   color: #fff;
@@ -535,6 +574,8 @@ header {
   max-width: 400px;
   margin-bottom: 30px;
 }
+html.dark .work{ color: #fff;}
+html.light .work{ color: #000;}
 .text{
   position: relative;
   color: #11E3FC;
@@ -542,6 +583,8 @@ header {
 .first-text{
   color: #fff;
 }
+html.dark .first-text{ color: #fff;}
+html.light .first-text{ color: #000;}
 .sec-text:before{
   content: "";
   position: absolute;
@@ -553,6 +596,15 @@ header {
   border-left: 2px solid #11E3FC;
   animation: animate 4s steps(12) infinite;
 }
+
+html.dark .sec-text:before{
+  background-color: #323234;
+}
+
+html.light .sec-text:before{
+  background-color: #ebf5f5;
+}
+
 @keyframes animate{
   40%, 60%{
     left: calc(100% + 4px);
@@ -611,8 +663,10 @@ header {
   max-width: 400px;
   font-size: 16px;
   color: #fff;
-  
 }
+html.dark .about-me__text{ color: #fff;}
+html.light .about-me__text{ color: #000;}
+
 .about-me__text span:first-child {
   font-weight: 700;
   color: #2a9ef1;
@@ -745,7 +799,10 @@ header {
   margin: 0px 25px;
   cursor: pointer;
 }
-.filter__item.active {
+html.dark .filter__item{ color: #fff;}
+html.light .filter__item{ color: #000;}
+
+.filter__item.active2 {
   color: #2a9ef1;
 }
 @media (max-width: 767.98px) {
@@ -763,6 +820,9 @@ header {
   margin: 0px 0px 10px 0px;
   color: #fff;
 }
+
+html.dark .header-block__title{ color: #fff;}
+html.light .header-block__title{ color: #000;}
 @media screen and (max-width: 767.98px), screen and (max-height: 600px) {
   .header-block__title {
     font-size: 25px;
@@ -1391,4 +1451,18 @@ ol.counter li:before {
 
 .blue{
   color:#11E3FC;
+}
+
+.page_theme{
+  font-size: 0px;
+  margin-left: 50px;
+  width: 25px;
+}
+
+html.dark .page_theme{
+  background: url('../img/svg_theme/moon-svgrepo-com.svg') 0 0 / 100% no-repeat;
+}
+
+html.light .page_theme{
+  background: url('../img/svg_theme/sun-summertime-svgrepo-com.svg') 0 0 / 100% no-repeat;
 }
