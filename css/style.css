@@ -1460,9 +1460,9 @@ ol.counter li:before {
 }
 
 html.dark .page_theme{
-  background: url('img/svg_theme/moon-svgrepo-com.svg') 0 0 / 100% no-repeat;
+  background: url('../../img/svg_theme/moon-svgrepo-com.svg') 0 0 / 100% no-repeat;
 }
 
 html.light .page_theme{
-  background: url('img/svg_theme/sun-summertime-svgrepo-com.svg') 0 0 / 100% no-repeat;
+  background: url('../../img/svg_theme/sun-summertime-svgrepo-com.svg') 0 0 / 100% no-repeat;
 }
